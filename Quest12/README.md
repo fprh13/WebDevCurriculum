@@ -27,10 +27,15 @@
 - `서버로부터 받은 HTML 내용을 그대로 검증 없이 프론트엔드에 innerHTML 등을 통해 적용하면 어떤 문제점이 있을까요?`
 
 > 1. SQL Injection
+
 > 2. 인증 및 세션 관련 취약점
+
 > 3. 파일 업로드 취약점
+
 > 4. HTTP Response Splitting
+
 > 5. 경로 조작 및 디렉토리 리스팅 취약점
+
 > 6. CSRF(Cross-site request forgery)
 
 - `XSS(Cross-site scripting)이란 어떤 공격기법일까요?`
