@@ -22,7 +22,7 @@
 
 <br>
 
-**<center> 💡CI/CD란? </center>**
+### **💡CI/CD란?**
 
 <br>
 
@@ -38,7 +38,7 @@
 
 <br><br><br>
 
-**<center>💡CI/CD의 장점</center>**
+### **💡CI/CD의 장점**
 
 <br>
 
@@ -57,7 +57,7 @@
 
 <br>
 
-**<center>💡차이점과 장담점 </center>**
+### **💡차이점과 장담점**
 
 <br>
 
