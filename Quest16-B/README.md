@@ -66,7 +66,6 @@ $ docker run -e [환경 변수] = [설정 값] [도커 image 명]
 [여러개의 환경 변수]=[여러개의 설정 값]
 
 #ex
-# env.list
 MY_ENV_VAR=my-value
 ANOTHER_ENV_VAR=another-value
 
