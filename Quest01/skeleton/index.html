@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<!-- TODO: 또 무엇이 필요할까요? -->
-	</head>
-	<body>
-		<header>
-			<!-- TODO: 어디까지를 header로 보는 것이 좋을까요? -->
-		</header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUEST01</title>
+  </head>
+  <body>
+    <header>
+      <!-- TODO: 어디까지를 header로 보는 것이 좋을까요? 페이지 위-->
+      <div>네이버</div>
+      <div class="search_area">
+        <form action="https://www.naver.com/search" method="GET">
+          <input type="text" placeholder="search" name="q" />
+          <button type="submit"><i class="search"></i>검색</button>
+        </form>
+      </div>
+    </header>
 
-		<section class="main">
-			<!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
-		</section>
+    <section class="main">
+      <!-- TODO: main은 어떤 식으로 나눌 수 있을까요? 섹션 클래스는 메인이다. 메인 안에 상속 된 값들 포함. -->
+      <ul>
+        <li>
+          <div>
+            <div>뉴스판</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>경제 표시판</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>연애판</div>
+          </div>
+        </li>
+      </ul>
 
-		<footer>
-			<!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
-		</footer>
-	</body>
+      <div>날씨판</div>
+      <!-- JS와 다른 html이 필요 -->
+      <div>코로나 상황</div>
+    </section>
+
+    <footer>
+      <!-- 하단 각 문자에 링크를 걸고 CSS 폰트 작업 및 배경 색 필요 -->
+      <span>로그인|고객센터</span>
+      <div>네이버</div>
+      <!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? 링크 태그를 달면된다.-->
+    </footer>
+  </body>
 </html>
