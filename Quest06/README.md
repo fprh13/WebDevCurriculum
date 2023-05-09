@@ -119,24 +119,81 @@
   > 맥 OS 터미널 명령어로 진행
 
   ```
-  sudo tcpdump -vni any 'host www.google.com and tcp port 80' -X
+  telnet www.google.com 80
 
   ```
 
   > 결과 값
 
   ```
-  tcpdump: data link type PKTAP
-  tcpdump: listening on any, link-type PKTAP (Apple DLT_PKTAP), snapshot length 524288 bytes
+  Trying 172.217.161.68...
+  Connected to www.google.com.
+  Escape character is '^]'.
   ```
 
   - `각각의 패킷에 어떤 정보들이 담겨 있나요?`
 
-  > tcpdump로는 패킷의 정보까지는 알 수 없었다.
+  > Frame 71: 68 bytes on wire (544 bits), 68 bytes captured (544 bits) on interface end, id 0
+  > Section number: 1
+  > › Interface id: 0 (en0)
+  > Encapsulation type: Ethernet (1)
+  > Arrival Time: May 10, 2023 01:19:15.670475000 KST
+  > [Time shift for this packet: 0.000000000 seconds]
+  > Epoch Time: 1683649155.670475000 seconds
+  > [Time delta from previous captured frame: 1.237341000 seconds]
+  > [Time delta from previous displayed frame: 1.237341000 seconds]
+  > [Time since reference or first frame: 26.387208000 seconds]
+  > Frame Number: 71
+  > Frame Length: 68 bytes (544 bits)
+  > Capture Length: 68 bytes (544 bits)
+  > [Frame is marked: False]
+  > [Frame is ignored: False]
+  > [Protocols in frame: eth:ethertype:ip:tcp]
+  > [Coloring Rule Name: HTTP]
+  > [Coloring Rule String: http I| tcp.port == 80 || http2]
+  > ~ Ethernet II, Sc: Apple_3a:8e:b5 (a8:8f:d9:3a:8e:b5), Dst: 76:b5:87:26:84:64 (76:b5:87:26:84:64)
+  > › Destination: 76:5:87:26:84:64 (76:5:87:26:84:64)
+  > Source: Apple_3a:8e:b5 (a8:8f:d9:3a:8e:b5)
+  > Type: IPV4 (0x0800)
+  > ~ Internet Protocol Version 4, Sr: 172.20.10.14, Dst: 172.217.161.68
+  > 0100 .... = Version: 4
+  > .... 0101 = Header Length: 20 bytes (5)
+  > › Differentiated Services Field: 0x10 (DSCP: Unknown, EC: Not-ECT)
+  > Total Length: 54
+  > Identification: 0x0000 (0) 000. .... = Flags: 0x0
+  > ...0 0000 0000 0000 = Fragment Offset: 0
+  > Time to Live: 64
+  > Protocol: TCP (6)
+  > Header Checksum: 0x7672 [validation disabled]
+  > [Header checksum status: Unverified]
+  > Source Address: 172.20.10.14
+  > Destination Address: 172.217.161.68
+  > ~ Transmission Control Protocol, Sr Port: 57528, Dst Port: 80, Seq: 1, Ack: 1, Len: 2
+  > Source Port: 57528
+  > Destination Port: 80
+  > [Stream index: 5]
+  > [Conversation completeness: Incomplete (28)]
+  > [TCP Segment Len: 2]
+  > Sequence Number: 1 (relative sequence number)
+  > Sequence Number (raw): 1483891125
+  > [Next Sequence Number: 3 (relative sequence number)]
+  > Acknowledgment Number: 1 (relative ack number)
+  > Acknowledgment number (raw): 1676570975
+  > 1000 . ... = Header Length: 32 bytes (8)
+  > Flags: 0x018 (PSH, ACK)
+  > Window: 2060
+  > [Calculated window size: 2060]
+  > [Window size scaling factor: -1 (unknown)]
+  > Checksum: 0x9b20 unverified.
+  > [Checksum Status: Unverified]
+  > Urgent Pointer: 0
+  > Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps [Timestamps]
+  > [SEQ/ACK analysis]
+  > TCP payload (2 bytes)
 
 - **`telnet 명령을 통해 http://www.google.com/ URL에 HTTP 요청을 날려 보세요.`**
 
-> 맥OS이기 때문에 cur1이라는 명령어로 진행
+> cur1이라는 명령어로 진행
 
 ```
 curl -v http://www.google.com/
